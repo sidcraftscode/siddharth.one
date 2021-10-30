@@ -4,9 +4,9 @@
   "description": "",
   "main": "postcss.config.js",
   "scripts": {
-    "dev": "TAILWIND_MODE=watch postcss -w tailwind.css -o public/styles/tailwind.css",
-    "serve": "serve public",
-    "build": "TAILWIND_MODE=build postcss tailwind.css -o public/styles/tailwind.css"
+    "dev": "TAILWIND_MODE=watch postcss -w tailwind.css -o docs/styles/tailwind.css",
+    "serve": "serve docs",
+    "build": "TAILWIND_MODE=build postcss tailwind.css -o docs/styles/tailwind.css"
   },
   "repository": {
     "type": "git",
