@@ -2,7 +2,7 @@
   <h2 class="text-3xl sm:text-5xl lg:text-5xl leading-none font-extrabold text-slate-900 tracking-tight mb-8">Subscribe to my mailing list</h2>
   <p class="text-lg sm:text-2xl sm:leading-10 font-medium mb-10 sm:mb-11">You'll get emails when I release a new post</a></p>
   <div id="">
-    <form class="mx-auto" action="https://docs.google.com/forms/d/e/1FAIpQLSezqV1IfK-PxEhH-S-xKLsoH89t4hailNZ4BHoWhmfrvPXYgg/formResponse" target="hidden_iframe" method="POST">
+    <form class="mx-auto" action="https://docs.google.com/forms/d/e/1FAIpQLSezqV1IfK-PxEhH-S-xKLsoH89t4hailNZ4BHoWhmfrvPXYgg/formResponse" target="hidden_iframe" id="form" method="POST">
       <div class="inline-block mx-auto">
       <label for="1050745937" class="text-left mt-2 sm:my-0 block text-slate-600 font-medium text-base" for="member_email">Email address</label>
       <div class="block sm:inline-flex">
@@ -30,6 +30,23 @@
     </span>
   </div>
 </footer>
+<script>
+  $('#form').submit(function (event) {
+    event.preventDefault()
+    var extraData = {}
+    $('#form').ajaxSubmit({
+        data: extraData,
+        dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
+        error: function () {
+            // Submit of form should be successful but JSONP callback will fail because Google Forms
+            // does not support it, so this is handled as a failure.
+            alert('Thanks! You are now subscribed to our mailing list.')
+            // You can also redirect the user to a custom thank-you page:
+            // window.location = 'http://www.mydomain.com/thankyoupage.html'
+        }
+    })
+})
+</script>
 </div>
 </body>
 </html>
