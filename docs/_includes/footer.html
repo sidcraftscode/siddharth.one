@@ -2,7 +2,7 @@
   <h2 class="text-3xl sm:text-5xl lg:text-5xl leading-none font-extrabold text-slate-900 tracking-tight mb-8">Subscribe to my mailing list</h2>
   <p class="text-lg sm:text-2xl sm:leading-10 font-medium mb-10 sm:mb-11">You'll get emails when I release a new post</a></p>
   <div id="">
-    <form class="mx-auto" action="https://docs.google.com/forms/d/e/1FAIpQLSezqV1IfK-PxEhH-S-xKLsoH89t4hailNZ4BHoWhmfrvPXYgg/formResponse" target="_self" method="POST">
+    <form class="mx-auto" action="https://docs.google.com/forms/d/e/1FAIpQLSezqV1IfK-PxEhH-S-xKLsoH89t4hailNZ4BHoWhmfrvPXYgg/formResponse" target="hidden_iframe" method="POST">
       <div class="inline-block mx-auto">
       <label for="1050745937" class="text-left mt-2 sm:my-0 block text-slate-600 font-medium text-base" for="member_email">Email address</label>
       <div class="block sm:inline-flex">
@@ -11,6 +11,7 @@
       </div>
       </div>
     </form>
+    <iframe class="hidden" id="hidden_iframe"></iframe>
   </div>
 </div>
 <footer class="mb-8 mt-10 pt-2 px-4 sm:px-6 md:px-8 text-gray-600 body-font">
