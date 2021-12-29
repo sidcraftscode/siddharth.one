@@ -1,4 +1,4 @@
-# The old site for siddharth.one
+# Repo for site siddharth.one
 
 ## Update 29 Dec 2021:
 - I moved my site to [sidcrafts.com](https://sidcrafts.com)
